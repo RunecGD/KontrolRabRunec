@@ -1,0 +1,15 @@
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/bin/Debug/net9.0/KontrolRabRunec
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/bin/Debug/net9.0/KontrolRabRunec.deps.json
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/bin/Debug/net9.0/KontrolRabRunec.runtimeconfig.json
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/bin/Debug/net9.0/KontrolRabRunec.dll
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/bin/Debug/net9.0/KontrolRabRunec.pdb
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/KontrolRabRunec.GeneratedMSBuildEditorConfig.editorconfig
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/KontrolRabRunec.AssemblyInfoInputs.cache
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/KontrolRabRunec.AssemblyInfo.cs
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/KontrolRabRunec.csproj.CoreCompileInputs.cache
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/KontrolRabRunec.sourcelink.json
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/KontrolRabRunec.dll
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/refint/KontrolRabRunec.dll
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/KontrolRabRunec.pdb
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/KontrolRabRunec.genruntimeconfig.cache
+/home/german/IdeaProjects/projectC#/KontrolRabRunec/KontrolRabRunec/obj/Debug/net9.0/ref/KontrolRabRunec.dll
