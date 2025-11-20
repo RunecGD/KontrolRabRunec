@@ -3,8 +3,7 @@ using System.Xml.Serialization;
 namespace KontrolRabRunec;
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
+
 
 [XmlInclude(typeof(NoteBook))]
 

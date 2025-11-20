@@ -25,22 +25,15 @@ public class SchoolBag
     {
         Items.Sort();
     }
-
-    public void Remove()
+    
+    public bool HasNoteBooksWithPagesMoreThan12()
     {
-        if (Weight > 3000) // 3 kg = 3000 grams
-        {
-            var heaviestItem = Items.OrderByDescending(item => item.Weight).FirstOrDefault();
-            if (heaviestItem != null)
-            {
-                Items.Remove(heaviestItem);
-            }
-        }
+        return Items.OfType<NoteBook>().Any(notebook => notebook.PageCount > 12);
     }
-    public bool SearchMasamatic()
-    {
-        return Items.OfType<TextBook>().Any(tb => tb.Name.Equals("Математика", StringComparison.OrdinalIgnoreCase));
 
+    public int TotalWeightAllTextBook()
+    {
+        return Items.OfType<TextBook>().Sum(textbook => textbook.Weight);
     }
     public void SerializeToXml(string filePath)
     {
@@ -51,7 +44,6 @@ public class SchoolBag
         }
     }
 
-    // Метод для десериализации из XML
     public static SchoolBag DeserializeFromXml(string filePath)
     {
         XmlSerializer serializer = new XmlSerializer(typeof(SchoolBag));
@@ -60,4 +52,15 @@ public class SchoolBag
             return (SchoolBag)serializer.Deserialize(reader);
         }
     }
+    public void Remove(int index)
+    {
+        if (index < 0 || index >= Items.Count) throw new ArgumentOutOfRangeException("Index out of range.");
+        Items.RemoveAt(index);
+    }
+    public List<Item> GetItems()
+    {
+        return Items;
+    }
+    public int ItemCount => Items.Count;
+
 }

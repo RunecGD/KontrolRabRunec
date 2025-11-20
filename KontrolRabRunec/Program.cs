@@ -1,36 +1,59 @@
-﻿using KontrolRabRunec;
+﻿using System.Numerics;
+using KontrolRabRunec;
 
 public class Program
 {
     static void Main()
     {
-        SchoolBag schoolBag=new SchoolBag();
-        schoolBag.Add(new TextBook(1000, "Математика"));
-        schoolBag.Add(new NoteBook(2000, 10));
-        schoolBag.Add(new NoteBook(1000, 20));
-        Console.WriteLine(schoolBag);
-        Console.WriteLine();
-        schoolBag.SortItems();
-        Console.WriteLine(schoolBag);
-        Console.WriteLine();
-        schoolBag.Remove();
-        Console.WriteLine(schoolBag);
-        if (schoolBag.SearchMasamatic())
-        {
-            Console.WriteLine("В рюкзаке лежит учебник математики");
-        }
-        else
-        {
-            Console.WriteLine("Нет учебника по математике");
-        }
+        SchoolBag schoolBag = new SchoolBag();
         string filePath = "schoolBag.xml";
-        schoolBag.SerializeToXml(filePath);
-        Console.WriteLine($"Serialized to {filePath}");
+        schoolBag = SchoolBag.DeserializeFromXml(filePath);
+        Console.WriteLine("Deserialized School Bag");
+        while (true)
+        {
+            Console.WriteLine("\nMenu:");
+            Console.WriteLine("1. Add Item");
+            Console.WriteLine("2. Sort Items");
+            Console.WriteLine("3. Show Contents");
+            Console.WriteLine("4. Check Notebook with PageCount > 12");
+            Console.WriteLine("5. Total Weight All TextBook");
+            Console.WriteLine("6. Remove Item");
+            Console.WriteLine("7. Exit");
+            Console.Write("Choose an action (1-6): ");
 
-        // Десериализация из XML
-        SchoolBag deserializedBag = SchoolBag.DeserializeFromXml(filePath);
-        Console.WriteLine("Deserialized School Bag:");
-        Console.WriteLine(deserializedBag);
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    ItemService.AddItem(schoolBag);
+                    schoolBag.SerializeToXml(filePath);
+                    Console.WriteLine($"Serialized to {filePath}");
+
+                    break;
+                case "2":
+                    schoolBag.SortItems();
+                    break;
+                case "3":
+                    ItemService.ShowContents(schoolBag);
+                    break;
+                case "4":
+                    ItemService.ChechPageCount(schoolBag);
+                    break;
+                case "5":
+                    Console.WriteLine("Total weight all textbook: " + schoolBag.TotalWeightAllTextBook());
+                    break;
+                case "6":
+                    ItemService.RemoveItem(schoolBag);
+                    schoolBag.SerializeToXml(filePath);
+                    Console.WriteLine($"Serialized to {filePath}");
+                    break;
+                case "7":
+                    return;
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    break;
+            }
+        }
     }
-    
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KontrolRabRunec")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17439e96fab5d820b962c83bd1ad852b4d3561c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("KontrolRabRunec")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KontrolRabRunec")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
